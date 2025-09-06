@@ -1,47 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Routes, Route, Link, useLocation } from 'react-router-dom';
-import { 
-  Music, 
-  Play, 
-  Download, 
-  ExternalLink, 
-  Globe, 
-  Headphones, 
-  Volume2, 
-  Users, 
-  ChevronUp, 
-  Menu, 
-  X,
-  Radio,
-  Zap,
-  Target,
-  Brain,
-  Settings,
-  BarChart3,
-  Shield,
-  Calendar,
-  Hash,
-  Layers,
-  BookOpen,
-  Mic2,
-  Waveform,
-  Database,
-  MapPin,
-  Search,
-  Filter,
-  Tag,
-  Clock,
-  TrendingUp,
-  Workflow,
-  GitBranch,
-  Code,
-  FileText,
-  Star,
-  Award,
-  Lightbulb,
-  RefreshCw,
-  Activity
-} from 'lucide-react';
+import { Music, Play, Download, ExternalLink, Globe, Headphones, Volume2, Users, ChevronUp, Menu, X, Radio, Zap, Target, Brain, Settings, BarChart3, Shield, Calendar, Hash, Layers, BookOpen, Mic2, AudioWaveform as Waveform, Database, MapPin, Search, Filter, Tag, Clock, TrendingUp, Workflow, GitBranch, Code, FileText, Star, Award, Lightbulb, RefreshCw, Activity } from 'lucide-react';
 import SEOHead from './components/SEOHead';
 import LazyImage from './components/LazyImage';
 import LivePage from './components/LivePage';
