@@ -64,3 +64,51 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, #7c3aed, #2563eb);
 }
+
+/* Line height utilities for better readability */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Enhanced text readability */
+body {
+  line-height: 1.6;
+}
+
+p {
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+}
+
+/* Improved focus states for accessibility */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 2px solid #8b5cf6;
+  outline-offset: 2px;
+}
+
+/* Better contrast for text on gradients */
+.text-on-gradient {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
