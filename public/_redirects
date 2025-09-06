@@ -1,0 +1,7 @@
+# Netlify redirects file
+
+# External redirects
+/live https://www.youtube.com/@MrFixermusic/streams 301!
+
+# SPA fallback - handle all client-side routes
+/*    /index.html   200

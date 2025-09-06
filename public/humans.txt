@@ -1,0 +1,47 @@
+# Mr. Fixer Music - Free Decentralized Electronic Music
+# https://mrfixerai.com
+
+/* TEAM */
+Creator: Mr. Fixer Music Collective
+Contact: https://soundcloud.com/mrfixermusic
+Location: Global Internet
+
+/* THANKS */
+Electronic Music Community
+DJs and Radio Curators worldwide
+Content Creators and Artists
+Open Source Community
+Creative Commons Initiative
+
+/* SITE */
+Last update: 2025/01/27
+Language: English
+Doctype: HTML5
+IDE: Modern Web Technologies
+Standards: W3C, WCAG 2.1 AA
+Components: React, TypeScript, Tailwind CSS
+Hosting: Netlify
+CDN: Global Edge Network
+
+/* MUSIC */
+Genre: Electronic, House, Techno, Ambient
+License: Creative Commons BY-NC 4.0
+Quality: 320kbps MP3, FLAC available
+Distribution: Global, No DRM
+Purpose: Free music for creative communities
+
+/* VALUES */
+- No Paywalls
+- No DRM
+- No Gatekeeping
+- Global Access
+- Creative Freedom
+- Decentralized Distribution
+
+/* CONTACT */
+Web: https://mrfixerai.com
+Music: https://soundcloud.com/mrfixermusic
+Live: https://mrfixerai.com/live
+Email: Contact via SoundCloud
+
+"Mr. Fixer is not a person – it's a sound system for the free world."

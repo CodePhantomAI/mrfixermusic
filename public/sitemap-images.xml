@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage Images -->
+  <url>
+    <loc>https://mrfixerai.com/</loc>
+    <image:image>
+      <image:loc>https://mrfixerai.com/og-image.jpg</image:loc>
+      <image:title>Mr. Fixer Music - Free Decentralized Electronic Music</image:title>
+      <image:caption>Free electronic music for DJs, radio curators, and content creators worldwide</image:caption>
+      <image:geo_location>Global</image:geo_location>
+      <image:license>https://creativecommons.org/licenses/by-nc/4.0/</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://mrfixerai.com/logo.png</image:loc>
+      <image:title>Mr. Fixer Music Logo</image:title>
+      <image:caption>Official logo of Mr. Fixer Music decentralized initiative</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mrfixerai.com/hero-background.jpg</image:loc>
+      <image:title>Electronic Music Visualization</image:title>
+      <image:caption>Abstract electronic music visualization representing decentralized sound</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Gallery Images -->
+  <url>
+    <loc>https://mrfixerai.com/gallery</loc>
+    <image:image>
+      <image:loc>https://mrfixerai.com/gallery-hero.jpg</image:loc>
+      <image:title>Mr. Fixer Music Gallery</image:title>
+      <image:caption>Browse complete collection of free electronic music</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mrfixerai.com/fixer-daily-drops-cover.jpg</image:loc>
+      <image:title>Fixer Daily Drops Collection</image:title>
+      <image:caption>Daily electronic music releases for DJs and creators</image:caption>
+    </image:image>
+  </url>
+
+  <!-- BMP Images -->
+  <url>
+    <loc>https://mrfixerai.com/bmp</loc>
+    <image:image>
+      <image:loc>https://mrfixerai.com/bmp-cover.jpg</image:loc>
+      <image:title>BMP - Beat Music Project</image:title>
+      <image:caption>Curated electronic beats and rhythms collection</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Live Stream Images -->
+  <url>
+    <loc>https://mrfixerai.com/live</loc>
+    <image:image>
+      <image:loc>https://mrfixerai.com/live-thumbnail.jpg</image:loc>
+      <image:title>Mr. Fixer Music Live Stream</image:title>
+      <image:caption>24/7 electronic music live stream experience</image:caption>
+    </image:image>
+  </url>
+
+</urlset>

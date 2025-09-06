@@ -1,0 +1,66 @@
+For all designs I ask you to make, have them be visually stunning, unique, and worthy of a real-world, production-level website. Avoid anything that looks like a generic template.
+
+📌 TECHNOLOGY & STYLING
+- Use JSX syntax with Tailwind CSS classes.
+- Use shadcn/ui for UI components.
+- Use Lucide React for icons (logo, buttons, navigation icons).
+- Do not install or use other UI theme libraries, icon sets, or design frameworks unless I explicitly request it.
+- Use stock photos from Unsplash where appropriate.
+- Ensure responsive design for desktop, tablet, and mobile.
+- Prioritize accessibility (ARIA attributes, proper semantic HTML).
+- All text should be in English with a professional, business-focused tone.
+
+📌 DESIGN PRINCIPLES
+- Sleek, modern, minimal but impactful.
+- Grid-based layouts for structure and clarity.
+- 2XL rounded corners, soft shadows, and balanced white space.
+- Typography hierarchy: large headlines (xl–3xl), readable body text, consistent font weights.
+- Use a consistent color palette inspired by EranFixer brand identity (deep blues, silver/grey tones, subtle gradients).
+- Avoid clutter; every element should have a clear purpose.
+
+📌 CONTENT SECTIONS FOR ERANFIXER WEBSITE
+1. **Hero Section**:
+   - Strong headline about EranFixer’s value proposition (Digital Systems, SEO, AI Solutions).
+   - Subheading: one sentence explaining the unique approach.
+   - CTA buttons: "Get Started" and "Learn More".
+   - Background: subtle gradient or high-quality Unsplash image.
+
+2. **About EranFixer**:
+   - Brief company history and mission.
+   - Emphasize: building modular digital systems, SEO expertise, AI-powered solutions.
+   - Include an image or graphic representing innovation and strategy.
+
+3. **Services Overview**:
+   - Website Development
+   - SEO (Local & Global)
+   - AI Business Automation
+   - Digital Reputation Management
+   - Each with Lucide icon, title, and short description.
+
+4. **Portfolio/Case Studies**:
+   - 3–6 examples of past work with screenshots and performance highlights.
+   - Grid layout with hover effects.
+
+5. **Why Choose EranFixer**:
+   - Bullet points for expertise, measurable results, innovation, long-term value.
+
+6. **Contact Section**:
+   - Contact form (name, email, message).
+   - Email and phone details.
+   - Embedded Google Map for office location (optional).
+
+7. **Footer**:
+   - Navigation links (Home, Services, Portfolio, Contact).
+   - Social media icons (Lucide icons).
+   - Copyright notice.
+
+📌 FUNCTIONALITY
+- Smooth scroll for in-page navigation.
+- Hover and focus states for all buttons and links.
+- Form validation with clear error messages.
+- SEO-friendly HTML structure.
+
+📌 TONE & BRANDING
+- Keep messaging confident, professional, and straightforward.
+- Position EranFixer as a leader in digital strategy and AI-powered solutions.
+- Highlight measurable results and business impact.

@@ -1,0 +1,35 @@
+# Security Policy for Mr. Fixer Music
+# https://mrfixerai.com/.well-known/security.txt
+
+Contact: https://soundcloud.com/mrfixermusic
+Expires: 2025-12-31T23:59:59.000Z
+Encryption: https://mrfixerai.com/pgp-key.txt
+Preferred-Languages: en
+Canonical: https://mrfixerai.com/.well-known/security.txt
+Policy: https://mrfixerai.com/security-policy
+
+# Scope
+# This security policy applies to:
+# - https://mrfixerai.com
+# - All subdomains of mrfixerai.com
+# - Mr. Fixer Music web applications and services
+
+# Reporting Guidelines
+# Please report security vulnerabilities responsibly
+# Include detailed steps to reproduce the issue
+# Allow reasonable time for response and resolution
+
+# Out of Scope
+# - Social engineering attacks
+# - Physical security issues
+# - Third-party services (SoundCloud, YouTube, etc.)
+# - Issues requiring physical access to devices
+
+# Acknowledgments
+# We appreciate responsible disclosure
+# Security researchers will be acknowledged (with permission)
+
+# Additional Information
+# This is a music distribution platform
+# We prioritize user privacy and data protection
+# All music is distributed under Creative Commons licensing

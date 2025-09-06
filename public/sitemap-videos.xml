@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  
+  <!-- Live Stream Video -->
+  <url>
+    <loc>https://mrfixerai.com/live</loc>
+    <video:video>
+      <video:thumbnail_loc>https://mrfixerai.com/live-thumbnail.jpg</video:thumbnail_loc>
+      <video:title>Mr. Fixer Music Live Stream - 24/7 Electronic Music Experience</video:title>
+      <video:description>Continuous live electronic music stream featuring house, techno, ambient, and experimental sounds. Free decentralized music experience by Mr. Fixer Music collective. Perfect for background music, studying, working, or just enjoying quality electronic music.</video:description>
+      <video:content_loc>https://www.youtube.com/@MrFixermusic/streams</video:content_loc>
+      <video:player_loc>https://www.youtube.com/@MrFixermusic/streams</video:player_loc>
+      <video:duration>86400</video:duration>
+      <video:publication_date>2025-01-27T00:00:00Z</video:publication_date>
+      <video:expiration_date>2026-01-27T00:00:00Z</video:expiration_date>
+      <video:rating>5.0</video:rating>
+      <video:view_count>10000</video:view_count>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>yes</video:live>
+      <video:requires_subscription>no</video:requires_subscription>
+      <video:uploader>Mr. Fixer Music</video:uploader>
+      <video:uploader_info>https://mrfixerai.com</video:uploader_info>
+      <video:platform>web</video:platform>
+      <video:restriction relationship="allow">US CA GB AU DE FR IT ES NL BE CH AT SE NO DK FI IE PT GR PL CZ HU SK SI HR BG RO LT LV EE MT CY LU JP KR SG HK TW IN TH VN MY PH ID BR MX AR CL CO PE UY VE</video:restriction>
+      <video:price currency="USD">0.00</video:price>
+      <video:category>Music</video:category>
+      <video:tag>electronic music</video:tag>
+      <video:tag>live stream</video:tag>
+      <video:tag>dj music</video:tag>
+      <video:tag>house music</video:tag>
+      <video:tag>techno music</video:tag>
+      <video:tag>ambient music</video:tag>
+      <video:tag>free music</video:tag>
+      <video:tag>decentralized music</video:tag>
+    </video:video>
+  </url>
+
+  <!-- Featured Music Videos -->
+  <url>
+    <loc>https://mrfixerai.com/collections/fixer-daily-drops-vol-48</loc>
+    <video:video>
+      <video:thumbnail_loc>https://mrfixerai.com/vol-48-thumbnail.jpg</video:thumbnail_loc>
+      <video:title>Fixer Daily Drops Vol. 48 - Global DJ Guests</video:title>
+      <video:description>Latest volume featuring international DJ collaborations and guest mixes from around the world. A celebration of global electronic music culture with house, techno, and experimental sounds.</video:description>
+      <video:content_loc>https://soundcloud.com/mrfixermusic/sets/fixer-daily-drops-vol-48-global-dj-guests</video:content_loc>
+      <video:duration>4320</video:duration>
+      <video:publication_date>2025-01-25T00:00:00Z</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+      <video:requires_subscription>no</video:requires_subscription>
+      <video:uploader>Mr. Fixer Music</video:uploader>
+      <video:category>Music</video:category>
+      <video:tag>dj collaboration</video:tag>
+      <video:tag>global music</video:tag>
+      <video:tag>electronic music</video:tag>
+      <video:tag>free download</video:tag>
+    </video:video>
+  </url>
+
+</urlset>
