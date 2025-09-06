@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -121,19 +121,32 @@
     
     <!-- Defer Google Analytics to not block rendering -->
     <script>
-      // Load Google Analytics after page load
+      // Load Google Analytics with consent management after page load
       window.addEventListener('load', function() {
         setTimeout(function() {
+          // Initialize gtag with default consent
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          
+          // Default consent state (denied until user accepts)
+          gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'functionality_storage': 'denied',
+            'personalization_storage': 'denied'
+          });
+          
           var script = document.createElement('script');
           script.async = true;
           script.src = 'https://www.googletagmanager.com/gtag/js?id=G-L5R65YG0WK';
           document.head.appendChild(script);
           
           script.onload = function() {
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-L5R65YG0WK');
+            gtag('config', 'G-L5R65YG0WK', {
+              'anonymize_ip': true,
+              'cookie_flags': 'secure;samesite=strict'
+            });
           };
         }, 1000); // Delay by 1 second to prioritize main content
       });

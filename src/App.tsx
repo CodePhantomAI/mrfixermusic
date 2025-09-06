@@ -3,6 +3,8 @@ import { Routes, Route, Link, useLocation } from 'react-router-dom';
 import { Music, Play, Download, ExternalLink, Globe, Headphones, Volume2, Users, ChevronUp, Menu, X, Radio, Zap, Target, Brain, Settings, BarChart3, Shield, Calendar, Hash, Layers, BookOpen, Mic2, AudioWaveform as Waveform, Database, MapPin, Search, Filter, Tag, Clock, TrendingUp, Workflow, GitBranch, Code, FileText, Star, Award, Lightbulb, RefreshCw, Activity } from 'lucide-react';
 import SEOHead from './components/SEOHead';
 import LazyImage from './components/LazyImage';
+import CookieConsent, { CookiePreferences } from './components/CookieConsent';
+import PrivacyPage from './components/PrivacyPage';
 import LivePage from './components/LivePage';
 import GalleryPage from './components/GalleryPage';
 import BmpPage from './components/BmpPage';
@@ -16,6 +18,8 @@ function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [animationStep, setAnimationStep] = useState(0);
+  const [showCookieConsent, setShowCookieConsent] = useState(false);
+  const [cookiePreferences, setCookiePreferences] = useState<CookiePreferences | null>(null);
   const location = useLocation();
   const heroRef = useRef<HTMLElement>(null);
 
@@ -33,8 +37,16 @@ function App() {
     }
   }, [location.pathname]);
 
-  // Scroll to top visibility
+  // Check cookie consent and scroll to top visibility
   useEffect(() => {
+    // Check cookie consent
+    const consent = localStorage.getItem('cookieConsent');
+    if (consent) {
+      setCookiePreferences(JSON.parse(consent));
+    } else {
+      setShowCookieConsent(true);
+    }
+
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 400);
     };
@@ -49,6 +61,63 @@ function App() {
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleAcceptAllCookies = () => {
+    const allAccepted: CookiePreferences = {
+      necessary: true,
+      analytics: true,
+      functional: true,
+      marketing: true
+    };
+    setCookiePreferences(allAccepted);
+    setShowCookieConsent(false);
+    localStorage.setItem('cookieConsent', JSON.stringify(allAccepted));
+    // Enable Google Analytics
+    if (typeof gtag !== 'undefined') {
+      gtag('consent', 'update', {
+        'analytics_storage': 'granted',
+        'ad_storage': 'granted',
+        'functionality_storage': 'granted',
+        'personalization_storage': 'granted'
+      });
+    }
+  };
+
+  const handleRejectAllCookies = () => {
+    const onlyNecessary: CookiePreferences = {
+      necessary: true,
+      analytics: false,
+      functional: false,
+      marketing: false
+    };
+    setCookiePreferences(onlyNecessary);
+    setShowCookieConsent(false);
+    localStorage.setItem('cookieConsent', JSON.stringify(onlyNecessary));
+    // Disable Google Analytics
+    if (typeof gtag !== 'undefined') {
+      gtag('consent', 'update', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'functionality_storage': 'denied',
+        'personalization_storage': 'denied'
+      });
+    }
+  };
+
+  const handleManageCookiePreferences = (preferences: CookiePreferences) => {
+    setCookiePreferences(preferences);
+    setShowCookieConsent(false);
+    localStorage.setItem('cookieConsent', JSON.stringify(preferences));
+    // Update Google Analytics based on preferences
+    if (typeof gtag !== 'undefined') {
+      gtag('consent', 'update', {
+        'analytics_storage': preferences.analytics ? 'granted' : 'denied',
+        'ad_storage': preferences.marketing ? 'granted' : 'denied',
+        'functionality_storage': preferences.functional ? 'granted' : 'denied',
+        'personalization_storage': preferences.functional ? 'granted' : 'denied'
+      });
+    }
   };
 
   // Home page component
@@ -1205,6 +1274,7 @@ function App() {
               <Link to="/downloads" className="hover:text-purple-300 transition-colors">Downloads</Link>
               <Link to="/bmp" className="hover:text-purple-300 transition-colors">BMP</Link>
               <Link to="/terms" className="hover:text-purple-300 transition-colors">Terms</Link>
+              <Link to="/privacy" className="hover:text-purple-300 transition-colors">Privacy</Link>
             </div>
 
             {/* Mobile Menu Button */}
@@ -1264,10 +1334,26 @@ function App() {
               >
                 Terms
               </Link>
+              <Link 
+                to="/privacy" 
+                className="block py-2 hover:text-purple-300 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Privacy
+              </Link>
             </div>
           </div>
         )}
       </nav>
+
+      {/* Cookie Consent */}
+      {showCookieConsent && (
+        <CookieConsent 
+          onAcceptAll={handleAcceptAllCookies}
+          onRejectAll={handleRejectAllCookies}
+          onManagePreferences={handleManageCookiePreferences}
+        />
+      )}
 
       {/* Scroll to Top Button */}
       {showScrollTop && (
@@ -1289,6 +1375,7 @@ function App() {
           <Route path="/downloads" element={<DownloadsPage />} />
           <Route path="/bmp" element={<BmpPage />} />
           <Route path="/terms" element={<TermsOfUsePage />} />
+          <Route path="/privacy" element={<PrivacyPage />} />
           <Route path="/dj-collective" element={<DJCollectivePage />} />
           <Route path="/private-collection" element={<PrivateCollectionPage />} />
         </Routes>
