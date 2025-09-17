@@ -42,9 +42,22 @@ function App() {
     // Check cookie consent
     const consent = localStorage.getItem('cookieConsent');
     if (consent) {
-      setCookiePreferences(JSON.parse(consent));
-    } else {
-      setShowCookieConsent(true);
+      try {
+        const preferences = JSON.parse(consent);
+        setCookiePreferences(preferences);
+        setShowCookieConsent(false);
+      } catch (error) {
+        // Handle corrupted localStorage data by clearing it and showing consent banner
+        localStorage.removeItem('cookieConsent');
+        localStorage.removeItem('cookieConsentDate');
+        setShowCookieConsent(true);
+        setCookiePreferences({
+          necessary: true,
+          analytics: false,
+          functional: false,
+          marketing: false
+        });
+      }
     }
 
     const handleScroll = () => {
