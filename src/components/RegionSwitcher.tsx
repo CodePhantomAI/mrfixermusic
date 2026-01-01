@@ -16,9 +16,9 @@ const regions: Region[] = [
   { code: 'vn', name: 'Vietnam', flag: '🇻🇳', url: 'https://vietnam.mrfixerai.com', status: 'active' },
   { code: 'jp', name: 'Japan', flag: '🇯🇵', url: 'https://jp.mrfixerai.com', status: 'active' },
   { code: 'kr', name: 'Korea', flag: '🇰🇷', url: 'https://korea.mrfixerai.com', status: 'active' },
-  { code: 'de', name: 'Germany', flag: '🇩🇪', url: 'https://de.mrfixerai.com', status: 'pending' },
-  { code: 'fr', name: 'France', flag: '🇫🇷', url: 'https://fr.mrfixerai.com', status: 'pending' },
-  { code: 'id', name: 'Indonesia', flag: '🇮🇩', url: 'https://id.mrfixerai.com', status: 'pending' },
+  { code: 'de', name: 'Germany', flag: '🇩🇪', url: 'https://de.mrfixerai.com', status: 'active' },
+  { code: 'fr', name: 'France', flag: '🇫🇷', url: 'https://fr.mrfixerai.com', status: 'active' },
+  { code: 'id', name: 'Indonesia', flag: '🇮🇩', url: 'https://id.mrfixerai.com', status: 'active' },
   { code: 'pt-br', name: 'Brazil', flag: '🇧🇷', url: 'https://pt-br.mrfixerai.com', status: 'active' },
 ];
 
