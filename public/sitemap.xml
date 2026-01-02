@@ -1,133 +1,183 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
-        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
-  
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
   <!-- Homepage -->
   <url>
     <loc>https://mrfixerai.com/</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-01-02</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mrfixerai.com/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://russian.mrfixerai.com/" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://ukraine.mrfixerai.com/" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://vietnam.mrfixerai.com/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://jp.mrfixerai.com/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://korea.mrfixerai.com/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://de.mrfixerai.com/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fr.mrfixerai.com/" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://id.mrfixerai.com/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://pt-br.mrfixerai.com/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mrfixerai.com/" />
     <image:image>
       <image:loc>https://mrfixerai.com/og-image.jpg</image:loc>
-      <image:title>Mr. Fixer Music - Free Decentralized Electronic Music</image:title>
-      <image:caption>Free electronic music for DJs, radio curators, and content creators worldwide</image:caption>
+      <image:title>Mr. Fixer Music - Global Electronic Music Collective</image:title>
+      <image:caption>Shadow producer-led collective offering 2,100+ free industrial electronic tracks</image:caption>
       <image:geo_location>Global</image:geo_location>
-      <image:license>https://creativecommons.org/licenses/by-nc/4.0/</image:license>
+      <image:license>https://mrfixerai.com/terms</image:license>
     </image:image>
   </url>
 
   <!-- Gallery Page -->
   <url>
     <loc>https://mrfixerai.com/gallery</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2026-01-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mrfixerai.com/gallery" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://russian.mrfixerai.com/gallery" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://ukraine.mrfixerai.com/gallery" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://vietnam.mrfixerai.com/gallery" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://jp.mrfixerai.com/gallery" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://korea.mrfixerai.com/gallery" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://de.mrfixerai.com/gallery" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fr.mrfixerai.com/gallery" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://id.mrfixerai.com/gallery" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://pt-br.mrfixerai.com/gallery" />
     <image:image>
       <image:loc>https://mrfixerai.com/gallery-image.jpg</image:loc>
-      <image:title>Mr. Fixer Music Gallery - Free Electronic Music Collections</image:title>
-      <image:caption>Browse Fixer Daily Drops series and curated electronic music collections</image:caption>
+      <image:title>Mr. Fixer Music Gallery - 209+ Volumes</image:title>
+      <image:caption>Complete catalog of free electronic music collections</image:caption>
     </image:image>
   </url>
 
   <!-- Live Stream Page -->
   <url>
     <loc>https://mrfixerai.com/live</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2026-01-02</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mrfixerai.com/live" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://russian.mrfixerai.com/live" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://ukraine.mrfixerai.com/live" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://vietnam.mrfixerai.com/live" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://jp.mrfixerai.com/live" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://korea.mrfixerai.com/live" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://de.mrfixerai.com/live" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fr.mrfixerai.com/live" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://id.mrfixerai.com/live" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://pt-br.mrfixerai.com/live" />
     <video:video>
       <video:thumbnail_loc>https://mrfixerai.com/live-thumbnail.jpg</video:thumbnail_loc>
-      <video:title>Mr. Fixer Music Live Stream - Electronic Music Experience</video:title>
-      <video:description>Live electronic music stream featuring house, techno, and ambient sounds from Mr. Fixer Music collective</video:description>
+      <video:title>Mr. Fixer Music Live - 24/7 Electronic Music Stream</video:title>
+      <video:description>Continuous live electronic music stream featuring industrial house, deep techno, and ambient sounds. Free decentralized music experience.</video:description>
       <video:content_loc>https://www.youtube.com/@MrFixermusic/streams</video:content_loc>
       <video:player_loc>https://www.youtube.com/@MrFixermusic/streams</video:player_loc>
-      <video:duration>7200</video:duration>
-      <video:publication_date>2025-01-27T00:00:00Z</video:publication_date>
+      <video:duration>86400</video:duration>
+      <video:publication_date>2026-01-02T00:00:00Z</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
       <video:live>yes</video:live>
       <video:requires_subscription>no</video:requires_subscription>
       <video:uploader>Mr. Fixer Music</video:uploader>
       <video:platform>web</video:platform>
-      <video:restriction relationship="allow">US CA GB AU DE FR IT ES NL BE CH AT SE NO DK FI IE PT GR PL CZ HU SK SI HR BG RO LT LV EE MT CY LU</video:restriction>
+      <video:restriction relationship="allow">WORLDWIDE</video:restriction>
     </video:video>
+  </url>
+
+  <!-- Downloads Page -->
+  <url>
+    <loc>https://mrfixerai.com/downloads</loc>
+    <lastmod>2026-01-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mrfixerai.com/downloads" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://russian.mrfixerai.com/downloads" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://ukraine.mrfixerai.com/downloads" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://vietnam.mrfixerai.com/downloads" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://jp.mrfixerai.com/downloads" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://korea.mrfixerai.com/downloads" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://de.mrfixerai.com/downloads" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fr.mrfixerai.com/downloads" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://id.mrfixerai.com/downloads" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://pt-br.mrfixerai.com/downloads" />
   </url>
 
   <!-- BMP Page -->
   <url>
     <loc>https://mrfixerai.com/bmp</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mrfixerai.com/bmp" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://russian.mrfixerai.com/bmp" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://ukraine.mrfixerai.com/bmp" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://vietnam.mrfixerai.com/bmp" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://jp.mrfixerai.com/bmp" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://korea.mrfixerai.com/bmp" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://de.mrfixerai.com/bmp" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fr.mrfixerai.com/bmp" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://id.mrfixerai.com/bmp" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://pt-br.mrfixerai.com/bmp" />
     <image:image>
       <image:loc>https://mrfixerai.com/bmp-image.jpg</image:loc>
-      <image:title>BMP - Beat Music Project by Mr. Fixer Music</image:title>
-      <image:caption>Curated electronic beats and rhythms for DJs and producers</image:caption>
+      <image:title>BMP - Beat Music Project</image:title>
+      <image:caption>Curated electronic beats collection for DJs and producers</image:caption>
     </image:image>
   </url>
 
-  <!-- Terms Page -->
+  <!-- DJ Collective Page -->
+  <url>
+    <loc>https://mrfixerai.com/dj-collective</loc>
+    <lastmod>2026-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Private Collection Page -->
+  <url>
+    <loc>https://mrfixerai.com/private-collection</loc>
+    <lastmod>2026-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Terms of Service Page -->
   <url>
     <loc>https://mrfixerai.com/terms</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2026-01-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mrfixerai.com/terms" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://russian.mrfixerai.com/terms" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://ukraine.mrfixerai.com/terms" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://vietnam.mrfixerai.com/terms" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://jp.mrfixerai.com/terms" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://korea.mrfixerai.com/terms" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://de.mrfixerai.com/terms" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fr.mrfixerai.com/terms" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://id.mrfixerai.com/terms" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://pt-br.mrfixerai.com/terms" />
   </url>
 
-  <!-- SoundCloud Collections -->
+  <!-- Privacy Policy Page -->
   <url>
-    <loc>https://mrfixerai.com/collections/fixer-daily-drops-vol-48</loc>
-    <lastmod>2025-01-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <news:news>
-      <news:publication>
-        <news:name>Mr. Fixer Music</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2025-01-25</news:publication_date>
-      <news:title>Fixer Daily Drops Vol. 48 - Global DJ Guests Released</news:title>
-      <news:keywords>electronic music, dj guests, global collaboration, free music, house music, techno</news:keywords>
-    </news:news>
-  </url>
-
-  <url>
-    <loc>https://mrfixerai.com/collections/fixer-daily-drops-vol-47</loc>
-    <lastmod>2025-01-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://mrfixerai.com/collections/fixer-daily-drops-vol-46</loc>
-    <lastmod>2025-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Genre Pages -->
-  <url>
-    <loc>https://mrfixerai.com/genre/house-music</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://mrfixerai.com/genre/techno-music</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://mrfixerai.com/genre/ambient-music</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://mrfixerai.com/privacy</loc>
+    <lastmod>2026-01-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mrfixerai.com/privacy" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://russian.mrfixerai.com/privacy" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://ukraine.mrfixerai.com/privacy" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://vietnam.mrfixerai.com/privacy" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://jp.mrfixerai.com/privacy" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://korea.mrfixerai.com/privacy" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://de.mrfixerai.com/privacy" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fr.mrfixerai.com/privacy" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://id.mrfixerai.com/privacy" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://pt-br.mrfixerai.com/privacy" />
   </url>
 
 </urlset>
-</url>

@@ -1,55 +1,80 @@
-# Mr. Fixer Music - Free Decentralized Electronic Music
+# Mr. Fixer Music - Global Electronic Music Collective
+# Shadow producer-led collective | 2,100+ free industrial tracks
 # Robots.txt for enhanced SEO and crawling optimization
 
 User-agent: *
 Allow: /
 Allow: /gallery
 Allow: /live
+Allow: /downloads
 Allow: /bmp
+Allow: /dj-collective
+Allow: /private-collection
 Allow: /terms
-Allow: /collections/
-Allow: /genre/
+Allow: /privacy
 Allow: /assets/
 Allow: /*.css$
 Allow: /*.js$
 Allow: /*.json$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.webp$
+Allow: /*.svg$
 
 # Disallow admin and private areas
 Disallow: /admin/
-Disallow: /private/
 Disallow: /api/
-Disallow: /*.pdf$
 Disallow: /dist/
 Disallow: /node_modules/
 Disallow: /src/
+Disallow: /*.pdf$
 
-# Specific bot instructions for better indexing
+# Search engine specific crawl rates
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 1
-Request-rate: 1/10s
+
+User-agent: Googlebot-Image
+Allow: /
+Crawl-delay: 1
+
+User-agent: Googlebot-Video
+Allow: /
+Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
 Crawl-delay: 2
-Request-rate: 1/15s
 
 User-agent: Slurp
 Allow: /
 Crawl-delay: 2
 
-# Social media bots for better sharing
-User-agent: facebookexternalhit
+User-agent: DuckDuckBot
 Allow: /
 Crawl-delay: 1
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 5
+
+User-agent: Yandex
+Allow: /
+Crawl-delay: 2
+
+# Social media bots for rich previews
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Facebot
+Allow: /
 
 User-agent: Twitterbot
 Allow: /
-Crawl-delay: 1
 
 User-agent: LinkedInBot
 Allow: /
-Crawl-delay: 1
 
 User-agent: WhatsApp
 Allow: /
@@ -60,11 +85,16 @@ Allow: /
 User-agent: SkypeUriPreview
 Allow: /
 
+User-agent: Slackbot
+Allow: /
+
+User-agent: Discordbot
+Allow: /
+
 User-agent: Applebot
 Allow: /
-Crawl-delay: 1
 
-# Music and media specific bots
+# Music platform bots
 User-agent: SoundCloudBot
 Allow: /
 
@@ -74,47 +104,55 @@ Allow: /
 User-agent: YouTubeBot
 Allow: /
 
-User-agent: DiscordBot
+User-agent: TikTokBot
 Allow: /
 
-# SEO and analytics bots
+# SEO tools (limited crawl rate)
 User-agent: AhrefsBot
-Allow: /
-Crawl-delay: 10
+Crawl-delay: 30
 
 User-agent: SemrushBot
-Allow: /
-Crawl-delay: 10
+Crawl-delay: 30
 
 User-agent: MJ12bot
-Allow: /
-Crawl-delay: 10
+Crawl-delay: 30
 
 User-agent: DotBot
-Allow: /
+Crawl-delay: 30
+
+User-agent: SeznamBot
 Crawl-delay: 10
 
-# Block aggressive crawlers
+User-agent: Applebot-Extended
+Disallow: /
+
+# Block aggressive/malicious crawlers
 User-agent: SemrushBot-SA
 Disallow: /
 
-User-agent: AhrefsBot
-Crawl-delay: 30
+User-agent: MJ12bot-ADULT
+Disallow: /
 
-User-agent: MJ12bot
-Crawl-delay: 30
+User-agent: Scrapy
+Disallow: /
 
-# Sitemap locations
+User-agent: ZoominfoBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+# Sitemap locations (order matters for priority)
+Sitemap: https://mrfixerai.com/sitemap-index.xml
 Sitemap: https://mrfixerai.com/sitemap.xml
 Sitemap: https://mrfixerai.com/sitemap-images.xml
 Sitemap: https://mrfixerai.com/sitemap-videos.xml
 
-# Additional information for search engines
-# Mr. Fixer Music - Free electronic music for DJs, radio curators, and content creators
-# Keywords: electronic music, dj music, free music, decentralized music, house music, techno music, ambient music
-# License: Creative Commons BY-NC 4.0
-# Contact: https://soundcloud.com/mrfixermusic
-# Language: en-US
-# Geographic targeting: Global
-# Content type: Music, Audio, Entertainment
-# Update frequency: Daily (music releases), Weekly (content updates)
+# Host specification (canonical domain)
+Host: https://mrfixerai.com
