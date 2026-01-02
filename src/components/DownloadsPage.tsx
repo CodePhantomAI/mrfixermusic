@@ -234,6 +234,108 @@ const DownloadsPage = () => {
           </div>
         </header>
 
+        {/* Copyright Free Music Section */}
+        <section className="py-20 bg-gradient-to-r from-red-900/20 via-orange-900/20 to-yellow-900/20">
+          <div className="container mx-auto px-6">
+            <div className="max-w-6xl mx-auto">
+              <div className="bg-gradient-to-br from-red-800/40 to-yellow-800/40 backdrop-blur-sm rounded-3xl border-2 border-red-500/30 overflow-hidden shadow-2xl">
+                <div className="p-8 md:p-12">
+                  <div className="text-center mb-8">
+                    <div className="inline-flex items-center justify-center mb-6">
+                      <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-yellow-500 rounded-full flex items-center justify-center shadow-lg">
+                        <Music className="w-8 h-8 text-white" />
+                      </div>
+                    </div>
+                    <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-red-300 to-yellow-300 bg-clip-text text-transparent">
+                      No Copyright Music 2025
+                    </h2>
+                    <p className="text-xl md:text-2xl text-gray-200 mb-6">
+                      The ultimate collection of Copyright Free Music and Royalty Free tracks for content creators.
+                    </p>
+                    <p className="text-lg text-gray-300 mb-4">
+                      Safe to use on YouTube, Twitch, Instagram, and TikTok without copyright strikes.
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div className="bg-black/30 p-6 rounded-2xl border border-red-500/20">
+                      <h3 className="text-xl font-bold mb-4 text-red-300">Perfect for:</h3>
+                      <ul className="space-y-2 text-gray-300">
+                        <li className="flex items-center">
+                          <span className="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+                          Vlog Background Music
+                        </li>
+                        <li className="flex items-center">
+                          <span className="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+                          Gaming Highlights & Montages
+                        </li>
+                        <li className="flex items-center">
+                          <span className="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+                          Live Streaming (Twitch/Kick)
+                        </li>
+                        <li className="flex items-center">
+                          <span className="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+                          Travel Videos & Cinematics
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div className="bg-black/30 p-6 rounded-2xl border border-yellow-500/20">
+                      <h3 className="text-xl font-bold mb-4 text-yellow-300">Usage Policy:</h3>
+                      <p className="text-gray-300 mb-4">
+                        You are free to use these tracks in your videos and monetize them.
+                      </p>
+                      <p className="text-gray-300 mb-4">
+                        Please credit the artist: <span className="font-bold text-yellow-400">mr fixer music</span> in your video description.
+                      </p>
+                      <div className="inline-flex items-center bg-green-500/20 border border-green-500/40 px-4 py-2 rounded-full">
+                        <Download className="w-4 h-4 mr-2 text-green-400" />
+                        <span className="text-green-300 font-semibold">Free Download</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-black/50 p-4 rounded-2xl border border-gray-700/50">
+                    <iframe
+                      width="100%"
+                      height="600"
+                      scrolling="no"
+                      frameBorder="no"
+                      allow="autoplay"
+                      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2161703111&color=%2390c0ea&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+                      title="No Copyright Music 2025 - Best for Vlogs, Gaming & Streaming"
+                      className="rounded-xl"
+                    />
+                    <div className="mt-4 text-center">
+                      <p className="text-xs text-gray-400">
+                        <a
+                          href="https://soundcloud.com/mrfixermusic"
+                          title="mr fixer music"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-cyan-400 hover:text-cyan-300 transition-colors"
+                        >
+                          mr fixer music
+                        </a>
+                        {' · '}
+                        <a
+                          href="https://soundcloud.com/mrfixermusic/sets/no-copyright-music-2025-best"
+                          title="No Copyright Music 2025 | Best for Vlogs, Gaming & Streaming (Royalty Free)"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-cyan-400 hover:text-cyan-300 transition-colors"
+                        >
+                          No Copyright Music 2025 | Best for Vlogs, Gaming & Streaming (Royalty Free)
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Quick Access */}
         <section className="py-20 bg-black/20">
           <div className="container mx-auto px-6">
@@ -248,7 +350,7 @@ const DownloadsPage = () => {
                 <p className="text-gray-300 mb-6 text-center">
                   Access the entire Mr. Fixer Music catalog with all albums, sets, and individual tracks.
                 </p>
-                <a 
+                <a
                   href="https://soundcloud.com/mrfixermusic/albums"
                   target="_blank"
                   rel="noopener noreferrer"
