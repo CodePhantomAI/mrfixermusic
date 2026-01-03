@@ -196,6 +196,16 @@ export default function Footer() {
               &copy; {new Date().getFullYear()} Mr. Fixer Music. No faces. No names. No ego.
             </p>
             <div className="flex items-center gap-6 text-sm text-gray-500">
+              <a
+                href="https://mrfixermusic.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 flex items-center gap-1 group"
+              >
+                mrfixermusic.com
+                <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+              </a>
+              <span className="text-gray-700">|</span>
               <span className="data-text text-cyan-500/50">mrfixerai.com</span>
               <span className="text-gray-700">|</span>
               <span className="text-gray-400">Free for non-commercial use (FCL)</span>
