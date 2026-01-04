@@ -420,6 +420,22 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        <a
+          href="https://soundcloud.com/mrfixermusic"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fixed bottom-8 right-8 z-50 group"
+          aria-label="Visit Mr. Fixer Music on SoundCloud"
+        >
+          <div className="relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity animate-pulse-glow" />
+            <div className="relative w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300">
+              <Music className="w-8 h-8 text-white" />
+            </div>
+          </div>
+          <div className="absolute -top-2 -right-2 w-4 h-4 bg-green-500 rounded-full border-2 border-gray-950 animate-pulse" />
+        </a>
       </div>
     </>
   );
