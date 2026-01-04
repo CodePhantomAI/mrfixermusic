@@ -75,6 +75,55 @@ export default function HomePage() {
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl" />
         <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl" />
 
+        <section className="relative pt-6 pb-8 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto">
+            <div className="glass-card rounded-2xl overflow-hidden border-cyan-500/20">
+              <div className="h-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-cyan-500" />
+              <div className="p-4 sm:p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center border border-cyan-500/30">
+                    <Music className="w-4 h-4 text-cyan-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-semibold text-white">Featured Playlist</h3>
+                    <p className="text-xs text-cyan-400">No Copyright Music 2025</p>
+                  </div>
+                </div>
+                <div className="rounded-xl overflow-hidden bg-gray-900/50">
+                  <iframe
+                    width="100%"
+                    height="450"
+                    scrolling="no"
+                    frameBorder="no"
+                    allow="autoplay"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2161703111&color=%2390c0ea&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+                    className="w-full"
+                  />
+                </div>
+                <div className="mt-3 text-xs text-gray-500">
+                  <a
+                    href="https://soundcloud.com/mrfixermusic"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-cyan-400 transition-colors"
+                  >
+                    mr fixer music
+                  </a>
+                  {' · '}
+                  <a
+                    href="https://soundcloud.com/mrfixermusic/sets/no-copyright-music-2025-best"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-cyan-400 transition-colors"
+                  >
+                    No Copyright Music 2025 | Best for Vlogs, Gaming & Streaming (Royalty Free)
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <header className="relative min-h-screen flex items-center justify-center px-4 sm:px-6">
           <div className="text-center max-w-5xl mx-auto z-10 py-20">
             <div className={`transition-all duration-700 ${animationStep >= 1 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
