@@ -13,6 +13,11 @@ import DownloadsPage from './components/DownloadsPage';
 import HomePage from './components/HomePage';
 import Footer from './components/Footer';
 import RegionSwitcher from './components/RegionSwitcher';
+import MagazinePage from './components/MagazinePage';
+import BlogPostPage from './components/BlogPostPage';
+import AdminLoginPage from './components/AdminLoginPage';
+import AdminDashboard from './components/AdminDashboard';
+import { AuthProvider } from './contexts/AuthContext';
 
 declare global {
   interface Window {
@@ -125,13 +130,15 @@ function App() {
     { to: '/live', label: 'Live' },
     { to: '/downloads', label: 'Downloads' },
     { to: '/bmp', label: 'BPM' },
+    { to: '/magazine', label: 'Magazine' },
   ];
 
   return (
-    <div className="min-h-screen bg-gray-950 text-white">
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-gray-950/95 backdrop-blur-xl border-b border-cyan-500/10' : 'bg-transparent'
-      }`}>
+    <AuthProvider>
+      <div className="min-h-screen bg-gray-950 text-white">
+        <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled ? 'bg-gray-950/95 backdrop-blur-xl border-b border-cyan-500/10' : 'bg-transparent'
+        }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <Link
@@ -237,6 +244,10 @@ function App() {
           <Route path="/live" element={<LivePage />} />
           <Route path="/downloads" element={<DownloadsPage />} />
           <Route path="/bmp" element={<BmpPage />} />
+          <Route path="/magazine" element={<MagazinePage />} />
+          <Route path="/magazine/:slug" element={<BlogPostPage />} />
+          <Route path="/admin" element={<AdminLoginPage />} />
+          <Route path="/admin/dashboard" element={<AdminDashboard />} />
           <Route path="/terms" element={<TermsOfUsePage />} />
           <Route path="/privacy" element={<PrivacyPage />} />
           <Route path="/dj-collective" element={<DJCollectivePage />} />
@@ -244,8 +255,9 @@ function App() {
         </Routes>
       </main>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </AuthProvider>
   );
 }
 
