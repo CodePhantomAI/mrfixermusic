@@ -79,7 +79,7 @@ export default function BlogPostPage() {
       <SEOHead
         title={`${post.title} - EranFixer Magazine`}
         description={post.excerpt}
-        canonical={`https://eranfixer.com/magazine/${post.slug}`}
+        canonicalUrl={`https://eranfixer.com/magazine/${post.slug}`}
       />
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
         <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

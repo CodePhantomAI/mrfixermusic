@@ -1,8 +1,10 @@
 # Database Setup Instructions
 
-## Step 1: Create the blog_posts Table
+## Step 1: Database Table (COMPLETED ✓)
 
-Go to your Supabase Dashboard SQL Editor and run this SQL:
+The `blog_posts` table has already been created automatically via migration.
+
+Skip to Step 2 to create your admin user.
 
 ```sql
 -- Create blog posts table
