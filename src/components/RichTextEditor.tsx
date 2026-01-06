@@ -90,7 +90,11 @@ export default function RichTextEditor({ value, onChange, onWarningsChange }: Ri
   const insertLink = () => {
     if (!linkUrl.trim()) return;
 
-    const url = linkUrl.trim();
+    let url = linkUrl.trim();
+
+    if (!url.match(/^https?:\/\//i)) {
+      url = 'https://' + url;
+    }
 
     if (savedSelectionRef.current) {
       const selection = window.getSelection();
