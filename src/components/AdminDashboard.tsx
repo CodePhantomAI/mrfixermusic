@@ -171,7 +171,7 @@ export default function AdminDashboard() {
                       slug: generateSlug(title),
                     });
                   }}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+                  className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-slate-900"
                   placeholder="Enter post title"
                 />
               </div>
@@ -182,7 +182,7 @@ export default function AdminDashboard() {
                   type="text"
                   value={editingPost.slug || ''}
                   onChange={(e) => setEditingPost({ ...editingPost, slug: e.target.value })}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+                  className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-slate-900"
                   placeholder="post-url-slug"
                 />
               </div>
@@ -192,7 +192,7 @@ export default function AdminDashboard() {
                 <textarea
                   value={editingPost.excerpt || ''}
                   onChange={(e) => setEditingPost({ ...editingPost, excerpt: e.target.value })}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+                  className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-slate-900"
                   rows={3}
                   placeholder="Brief description of the post"
                 />
@@ -203,7 +203,7 @@ export default function AdminDashboard() {
                 <textarea
                   value={editingPost.content || ''}
                   onChange={(e) => setEditingPost({ ...editingPost, content: e.target.value })}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none font-mono text-sm"
+                  className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none font-mono text-sm text-slate-900"
                   rows={15}
                   placeholder="Write your post content here. Use # for headings, - for lists"
                 />
@@ -215,7 +215,7 @@ export default function AdminDashboard() {
                   type="text"
                   value={editingPost.cover_image || ''}
                   onChange={(e) => setEditingPost({ ...editingPost, cover_image: e.target.value })}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+                  className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-slate-900"
                   placeholder="https://example.com/image.jpg"
                 />
               </div>
@@ -226,7 +226,7 @@ export default function AdminDashboard() {
                   type="text"
                   value={editingPost.author || ''}
                   onChange={(e) => setEditingPost({ ...editingPost, author: e.target.value })}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+                  className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-slate-900"
                   placeholder="Author name"
                 />
               </div>
