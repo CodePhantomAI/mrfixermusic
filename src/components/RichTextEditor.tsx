@@ -11,6 +11,7 @@ export default function RichTextEditor({ value, onChange, onWarningsChange }: Ri
   const editorRef = useRef<HTMLDivElement>(null);
   const [showLinkModal, setShowLinkModal] = useState(false);
   const [linkUrl, setLinkUrl] = useState('');
+  const savedSelectionRef = useRef<Range | null>(null);
 
   useEffect(() => {
     if (editorRef.current && editorRef.current.innerHTML !== value) {
@@ -78,28 +79,44 @@ export default function RichTextEditor({ value, onChange, onWarningsChange }: Ri
       alert('Please select text first to create a link');
       return;
     }
+
+    if (selection.rangeCount > 0) {
+      savedSelectionRef.current = selection.getRangeAt(0).cloneRange();
+    }
+
     setShowLinkModal(true);
   };
 
   const insertLink = () => {
-    if (linkUrl.trim()) {
-      const url = linkUrl.trim();
-      document.execCommand('createLink', false, url);
+    if (!linkUrl.trim()) return;
 
-      if (editorRef.current) {
-        const links = editorRef.current.querySelectorAll('a');
-        links.forEach(link => {
-          if (!link.hasAttribute('target')) {
-            link.setAttribute('target', '_blank');
-            link.setAttribute('rel', 'noopener noreferrer');
-          }
-        });
+    const url = linkUrl.trim();
+
+    if (savedSelectionRef.current) {
+      const selection = window.getSelection();
+      if (selection) {
+        selection.removeAllRanges();
+        selection.addRange(savedSelectionRef.current);
       }
-
-      setShowLinkModal(false);
-      setLinkUrl('');
-      handleInput();
     }
+
+    document.execCommand('createLink', false, url);
+
+    if (editorRef.current) {
+      const links = editorRef.current.querySelectorAll('a');
+      links.forEach(link => {
+        if (!link.hasAttribute('target')) {
+          link.setAttribute('target', '_blank');
+          link.setAttribute('rel', 'noopener noreferrer');
+        }
+      });
+    }
+
+    setShowLinkModal(false);
+    setLinkUrl('');
+    savedSelectionRef.current = null;
+    handleInput();
+    editorRef.current?.focus();
   };
 
   const preventH1 = (e: React.KeyboardEvent) => {

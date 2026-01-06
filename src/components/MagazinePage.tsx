@@ -90,7 +90,7 @@ export default function MagazinePage() {
                     <h2 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
                       {post.title}
                     </h2>
-                    <p className="text-slate-600 mb-4 line-clamp-3">{post.excerpt}</p>
+                    <p className="text-slate-900 mb-4 line-clamp-3">{post.excerpt}</p>
                     <div className="flex items-center justify-between text-sm text-slate-500 mb-4">
                       <div className="flex items-center gap-2">
                         <User className="w-4 h-4" />
