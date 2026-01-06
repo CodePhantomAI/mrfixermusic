@@ -16,6 +16,10 @@ export type BlogPost = {
   excerpt: string;
   content: string;
   cover_image: string;
+  meta_description: string;
+  featured_image_alt: string;
+  category: string;
+  tags: string[];
   author: string;
   published: boolean;
   created_at: string;

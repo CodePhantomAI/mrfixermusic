@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Plus, Edit, Trash2, Eye, EyeOff, LogOut, Save, X } from 'lucide-react';
+import { Plus, Edit, Trash2, Eye, EyeOff, LogOut } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import { supabase, type BlogPost } from '../lib/supabase';
+import BlogEditor from './BlogEditor';
 
 export default function AdminDashboard() {
   const { user, signOut, loading: authLoading } = useAuth();
@@ -40,13 +41,6 @@ export default function AdminDashboard() {
     }
   };
 
-  const generateSlug = (title: string) => {
-    return title
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/^-|-$/g, '');
-  };
-
   const handleNewPost = () => {
     setEditingPost({
       title: '',
@@ -54,6 +48,10 @@ export default function AdminDashboard() {
       excerpt: '',
       content: '',
       cover_image: '',
+      meta_description: '',
+      featured_image_alt: '',
+      category: '',
+      tags: [],
       author: 'Mr. Fixer',
       published: false,
     });
@@ -70,8 +68,8 @@ export default function AdminDashboard() {
     setIsNewPost(false);
   };
 
-  const handleSave = async () => {
-    if (!editingPost || !editingPost.title || !editingPost.slug) {
+  const handleSave = async (postData: Partial<BlogPost>) => {
+    if (!postData.title || !postData.slug) {
       alert('Title and slug are required');
       return;
     }
@@ -80,8 +78,8 @@ export default function AdminDashboard() {
       if (isNewPost) {
         const { error } = await supabase.from('blog_posts').insert([
           {
-            ...editingPost,
-            published_at: editingPost.published ? new Date().toISOString() : null,
+            ...postData,
+            published_at: postData.published ? new Date().toISOString() : null,
           },
         ]);
         if (error) throw error;
@@ -89,11 +87,11 @@ export default function AdminDashboard() {
         const { error } = await supabase
           .from('blog_posts')
           .update({
-            ...editingPost,
+            ...postData,
             updated_at: new Date().toISOString(),
-            published_at: editingPost.published ? (editingPost.published_at || new Date().toISOString()) : null,
+            published_at: postData.published ? (postData.published_at || new Date().toISOString()) : null,
           })
-          .eq('id', editingPost.id);
+          .eq('id', postData.id);
         if (error) throw error;
       }
 
@@ -153,115 +151,12 @@ export default function AdminDashboard() {
         </div>
 
         {editingPost ? (
-          <div className="bg-white rounded-2xl shadow-xl p-8 mb-8">
-            <h2 className="text-2xl font-bold text-slate-900 mb-6">
-              {isNewPost ? 'Create New Post' : 'Edit Post'}
-            </h2>
-            <div className="space-y-6">
-              <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">Title</label>
-                <input
-                  type="text"
-                  value={editingPost.title || ''}
-                  onChange={(e) => {
-                    const title = e.target.value;
-                    setEditingPost({
-                      ...editingPost,
-                      title,
-                      slug: generateSlug(title),
-                    });
-                  }}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-slate-900"
-                  placeholder="Enter post title"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">Slug</label>
-                <input
-                  type="text"
-                  value={editingPost.slug || ''}
-                  onChange={(e) => setEditingPost({ ...editingPost, slug: e.target.value })}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-slate-900"
-                  placeholder="post-url-slug"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">Excerpt</label>
-                <textarea
-                  value={editingPost.excerpt || ''}
-                  onChange={(e) => setEditingPost({ ...editingPost, excerpt: e.target.value })}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-slate-900"
-                  rows={3}
-                  placeholder="Brief description of the post"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">Content</label>
-                <textarea
-                  value={editingPost.content || ''}
-                  onChange={(e) => setEditingPost({ ...editingPost, content: e.target.value })}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none font-mono text-sm text-slate-900"
-                  rows={15}
-                  placeholder="Write your post content here. Use # for headings, - for lists"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">Cover Image URL</label>
-                <input
-                  type="text"
-                  value={editingPost.cover_image || ''}
-                  onChange={(e) => setEditingPost({ ...editingPost, cover_image: e.target.value })}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-slate-900"
-                  placeholder="https://example.com/image.jpg"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">Author</label>
-                <input
-                  type="text"
-                  value={editingPost.author || ''}
-                  onChange={(e) => setEditingPost({ ...editingPost, author: e.target.value })}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-slate-900"
-                  placeholder="Author name"
-                />
-              </div>
-
-              <div className="flex items-center gap-3">
-                <input
-                  type="checkbox"
-                  id="published"
-                  checked={editingPost.published || false}
-                  onChange={(e) => setEditingPost({ ...editingPost, published: e.target.checked })}
-                  className="w-5 h-5 text-blue-600 border-slate-300 rounded focus:ring-blue-500"
-                />
-                <label htmlFor="published" className="text-sm font-medium text-slate-700">
-                  Publish this post
-                </label>
-              </div>
-
-              <div className="flex gap-4">
-                <button
-                  onClick={handleSave}
-                  className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-xl font-semibold hover:shadow-lg transform hover:-translate-y-0.5 transition-all"
-                >
-                  <Save className="w-5 h-5" />
-                  Save Post
-                </button>
-                <button
-                  onClick={handleCancel}
-                  className="flex items-center gap-2 px-6 py-3 bg-slate-200 text-slate-700 rounded-xl font-semibold hover:bg-slate-300 transition-colors"
-                >
-                  <X className="w-5 h-5" />
-                  Cancel
-                </button>
-              </div>
-            </div>
-          </div>
+          <BlogEditor
+            post={editingPost}
+            isNew={isNewPost}
+            onSave={handleSave}
+            onCancel={handleCancel}
+          />
         ) : (
           <>
             <button
