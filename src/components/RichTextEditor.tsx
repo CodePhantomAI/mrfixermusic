@@ -82,8 +82,20 @@ export default function RichTextEditor({ value, onChange, onWarningsChange }: Ri
   };
 
   const insertLink = () => {
-    if (linkUrl) {
-      execCommand('createLink', linkUrl);
+    if (linkUrl.trim()) {
+      const url = linkUrl.trim();
+      document.execCommand('createLink', false, url);
+
+      if (editorRef.current) {
+        const links = editorRef.current.querySelectorAll('a');
+        links.forEach(link => {
+          if (!link.hasAttribute('target')) {
+            link.setAttribute('target', '_blank');
+            link.setAttribute('rel', 'noopener noreferrer');
+          }
+        });
+      }
+
       setShowLinkModal(false);
       setLinkUrl('');
       handleInput();
@@ -173,7 +185,7 @@ export default function RichTextEditor({ value, onChange, onWarningsChange }: Ri
         onInput={handleInput}
         onPaste={handlePaste}
         onKeyUp={preventH1}
-        className="p-4 min-h-[400px] focus:outline-none text-slate-900 prose prose-slate max-w-none"
+        className="p-4 min-h-[400px] focus:outline-none text-slate-900 prose prose-slate max-w-none prose-h2:text-2xl prose-h2:font-bold prose-h2:text-slate-900 prose-h2:mt-8 prose-h2:mb-4 prose-h3:text-xl prose-h3:font-bold prose-h3:text-slate-900 prose-h3:mt-6 prose-h3:mb-3 prose-p:text-slate-700 prose-p:mb-4 prose-strong:text-slate-900 prose-strong:font-bold prose-ul:my-4 prose-ol:my-4 prose-li:text-slate-700 prose-li:mb-2 prose-blockquote:border-l-4 prose-blockquote:border-blue-500 prose-blockquote:pl-4 prose-blockquote:italic prose-blockquote:text-slate-600 prose-a:text-blue-600 prose-a:underline hover:prose-a:text-blue-700"
         style={{
           fontSize: '16px',
           lineHeight: '1.6',
