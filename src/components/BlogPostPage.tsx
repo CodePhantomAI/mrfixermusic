@@ -124,7 +124,7 @@ export default function BlogPostPage() {
           )}
 
           <div
-            className="prose prose-lg prose-slate max-w-none prose-h2:text-3xl prose-h2:font-bold prose-h2:text-slate-900 prose-h2:mt-12 prose-h2:mb-6 prose-h3:text-2xl prose-h3:font-bold prose-h3:text-slate-900 prose-h3:mt-8 prose-h3:mb-4 prose-p:text-slate-700 prose-p:leading-relaxed prose-p:mb-6 prose-strong:text-slate-900 prose-strong:font-bold prose-ul:my-6 prose-ol:my-6 prose-li:text-slate-700 prose-blockquote:border-l-4 prose-blockquote:border-blue-500 prose-blockquote:pl-4 prose-blockquote:italic prose-blockquote:text-slate-600 prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline"
+            className="prose prose-lg prose-slate max-w-none [&_h2]:text-3xl [&_h2]:font-bold [&_h2]:text-slate-900 [&_h2]:mt-12 [&_h2]:mb-6 [&_h3]:text-2xl [&_h3]:font-bold [&_h3]:text-slate-900 [&_h3]:mt-8 [&_h3]:mb-4 [&_p]:text-slate-900 [&_p]:leading-relaxed [&_p]:mb-6 [&_strong]:text-slate-900 [&_strong]:font-bold [&_b]:text-slate-900 [&_b]:font-bold [&_ul]:my-6 [&_ol]:my-6 [&_li]:text-slate-900 [&_blockquote]:border-l-4 [&_blockquote]:border-blue-500 [&_blockquote]:pl-4 [&_blockquote]:italic [&_blockquote]:text-slate-700 [&_a]:text-blue-600 [&_a]:underline hover:[&_a]:text-blue-700"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
 
