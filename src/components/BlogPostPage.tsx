@@ -124,7 +124,8 @@ export default function BlogPostPage() {
           )}
 
           <div
-            className="prose prose-lg prose-slate max-w-none [&_h2]:text-3xl [&_h2]:font-bold [&_h2]:text-slate-900 [&_h2]:mt-12 [&_h2]:mb-6 [&_h3]:text-2xl [&_h3]:font-bold [&_h3]:text-slate-900 [&_h3]:mt-8 [&_h3]:mb-4 [&_p]:text-slate-900 [&_p]:leading-relaxed [&_p]:mb-6 [&_strong]:text-slate-900 [&_strong]:font-bold [&_b]:text-slate-900 [&_b]:font-bold [&_ul]:my-6 [&_ol]:my-6 [&_li]:text-slate-900 [&_blockquote]:border-l-4 [&_blockquote]:border-blue-500 [&_blockquote]:pl-4 [&_blockquote]:italic [&_blockquote]:text-slate-700 [&_a]:text-blue-600 [&_a]:underline hover:[&_a]:text-blue-700"
+            className="prose prose-lg max-w-none text-slate-900 prose-headings:text-slate-900 prose-p:text-slate-900 prose-strong:text-slate-900 prose-li:text-slate-900 prose-a:text-blue-600 prose-blockquote:text-slate-700 [&_h2]:text-3xl [&_h2]:font-bold [&_h2]:text-slate-900 [&_h2]:mt-12 [&_h2]:mb-6 [&_h3]:text-2xl [&_h3]:font-bold [&_h3]:text-slate-900 [&_h3]:mt-8 [&_h3]:mb-4 [&_p]:text-slate-900 [&_p]:leading-relaxed [&_p]:mb-6 [&_strong]:text-slate-900 [&_strong]:font-bold [&_b]:text-slate-900 [&_b]:font-bold [&_ul]:my-6 [&_ol]:my-6 [&_li]:text-slate-900 [&_blockquote]:border-l-4 [&_blockquote]:border-blue-500 [&_blockquote]:pl-4 [&_blockquote]:italic [&_blockquote]:text-slate-700 [&_a]:text-blue-600 [&_a]:underline hover:[&_a]:text-blue-700"
+            style={{ color: '#0f172a' }}
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
 
